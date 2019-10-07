@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="banner">
+      <img src="assets/banner.png" style="width: 1110px">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"style="background-color: #e3f2fd;">
+        <a class="navbar-brand" routerLink="/trangchu">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link"  routerLink="/lienhe">Liên hệ</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" routerLink="/gopy">Góp ý</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/hoidap">Hỏi đáp</a>
+                  </li>
+          </ul>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tài khoản
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">
+                  Đăng ký
+                </a>
+                <a class="dropdown-item" href="#">Đăng nhập</a> 
+                <a class="dropdown-item" href="#">Quên mật khẩu</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Đăng xuất</a>
+                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                <a class="dropdown-item" href="#">Cập nhật tài khoản</a>
+                <a class="dropdown-item" href="#">Cài đặt</a>
+              </div>
+            </li>
+        </div>
+      </nav><br>
+      <div class="icon">
+        <i class="fa fa-home"></i>
+        <a routerLink="/trangchu"class="da">Trang chủ ></a>
+        <a class="da">Đổi mật khẩu</a>
+    </div>
+      <h2>Cài đặt mật khẩu mới</h2>
+      Vui lòng cài đặt mật khẩu mới gồm 8-16 kí tự và phải khác so với tên
+      đăng nhập của bạn. Mật khẩu tạo phải bao gồm ít nhất 1 kí tự từ(AZ hoặc az) và một số 0-9
+  </div>
+  
+    
+    <div class="container" style="padding-left: 360px">
+        <form class="form-inline">
+            <div class="form-group mb-2">
+            Mật khẩu cũ<br>
+            
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">Password</label>
+              <input  style="padding-left: 20px" type="text" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+          </form>
+          <form class="form-inline">
+            <div class="form-group mb-2">
+            Mật khẩu mới
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">Password</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="">
+            </div>
+          </form><br>
+          <div class="quen" style="padding-left: 80px">
+            <a routerLink="/dangky">Xác nhận</a>
+            <a routerLink="/matkhau"style="padding-left:20px">Quên mật khẩu?</a>
+          </div>
+         
+    </div>
+    
+
+
