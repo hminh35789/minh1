@@ -1,2 +1,84 @@
-
-<router-outlet></router-outlet>
+ <div class="tieude"style="background-color:black;height:35px">
+   <div class="row">
+     fdsfsfds
+   </div>
+ </div>
+   <div class="banner">
+    <nav  style="background-color:rgba(77, 72, 72, 0.733);padding-left: 150px;" class="navbar navbar-expand-lg navbar-light ">
+        <div  class="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/trangchu"style="color:white">Trang chủ</a>
+                  </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/gioithieu"style="color:white">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="/lienhe"style="color: white">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  routerLink="/gopy"style="color: white">Góp ý</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  routerLink="/hoidap"style="color: white">Hỏi đáp</a>
+                  </li>
+       
+                  <li class="nav-item dropdown"style="padding-left:500px" >
+              <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tài khoản
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="/dangky">
+                  Đăng ký
+                </a>
+                <a class="dropdown-item" routerLink="/dangnhap">Đăng nhập</a> 
+                <a class="dropdown-item" routerLink="/matkhau">Quên mật khẩu</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Đăng xuất</a>
+                <a class="dropdown-item" routerLink="/doimk">Đổi mật khẩu</a>
+                <a class="dropdown-item" href="#">Cập nhật tài khoản</a>
+                
+              </div>
+            </li> 
+          </ul>
+        </div>
+      </nav>
+    </div><br>
+      <div class="hoc"style="padding-left:50px;">
+        <router-outlet></router-outlet>
+        </div><br>
+        <footer  class="modau"style="background-color:#E8E8E8">
+            <div class="row">
+              
+              
+          <div class="col-4">
+            <p>TÊN CÔNG TY</p>
+            <p>Địa chỉ: 123 abc, phường X, quận Y, tp.Z<br />
+            Điện thoại: 012.3456789</p>
+            <p>Email: <a href="mailto:support@hocwebchuan.com">support@hocwebchuan.com</a></p>
+            </div>
+            <div class="col-4">
+              
+                </div>
+                <div class="col-3">
+                    <nav class="navbar navbar-expand">
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Javascript</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Css</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Bootstrap</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div> </div>
+        </footer>
+        
+    
+        
+          
+    
