@@ -1,1 +1,17 @@
-<p>cauhoi works!</p>
+
+       
+       
+       {{product.Name}}
+    
+       <div class="card-body">
+        <span *ngFor='let q of question | paginate: { itemsPerPage: itemPerPage, currentPage: currentPage }'>
+            <span class="question">{{currentPage}}. {{q.Text}}</span>
+        </span><br>
+        <hr>
+        <div class="form-check" *ngFor = 'let a of answer'>
+            <input class="form-check-input" type="radio" [(ngModel)]="correctAns" [ngModelOptions]="{standalone: true}" value="{{a.Id}}" >
+            <label class="form-check-label" for="exampleRadios1" >
+                {{a.Text}}
+            </label>
+        </div>
+    </div>

@@ -49,7 +49,8 @@ product:any;
 url='./assets/Subjects.js'
 
   ngOnInit() {
-   
+    // this.page = Math.ceil(this.danhmuc.length / this.sotrang);
+    this.page = Math.ceil(20 / this.sotrang)
     this.dm.getDanhmuc().subscribe(dm=>{
       this.danhmuc=dm;
      

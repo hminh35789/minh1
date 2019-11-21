@@ -46,7 +46,7 @@ import {FormsModule} from '@angular/forms';
       {path:'matkhau',component:MatkhauComponent},
       {path:'doimk',component:DoimatkhauComponent},
       {path:'danhmuc',component:DanhmucComponent},
-      {path:'cauhoi/:Id',component:CauhoiComponent},
+      {path:'danhmuc/:id',component:CauhoiComponent},
       {path:'**',redirectTo:'trangchu',pathMatch:'full'}
     ])
 
