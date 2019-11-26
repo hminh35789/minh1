@@ -13,3 +13,17 @@ position: relative;
    
     
 }
+h6 {
+  color: crimson;
+}
+.left {
+ 
+
+ 
+  background: linear-gradient(45deg, #e61aa2, #4edadf);
+}
+body {
+  background-image: url(/src/assets/banner3.jpg);
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+}

@@ -1,10 +1,14 @@
 <div class="row">
-  <div class="col-4" *ngFor="let dm of danhmuc | paginate: { itemsPerPage: sotrang, currentPage: trangthu}">
-    <div class="card" style="width: 18rem;text-align: center">
-      <h5 class="card-title">{{dm.Id}}</h5>
+  <div  class="col-4" *ngFor="let dm of danhmuc | paginate: { itemsPerPage: sotrang, currentPage: trangthu}">
+    <div class="card right" style="width: 18rem;text-align: center;">
+     <div class="card-header"><h5>{{dm.Id}}</h5></div> 
       <img src="{{dm.Logo}}">
       <div class="card-body">
-        <h5 class="card-title"[routerLink]="['/danhmuc',dm.id]" routerLinkActive="router-link-active" >{{dm.Name}}</h5>
+        <h5 >{{dm.Name}}</h5>
+      </div>
+      <div class="card-footer">
+          <button style="background-color: red;border-radius: 20px;"  >Ôn lại kiến thức</button>
+        <button style="background-color: rgb(83, 158, 83);border-radius: 20px;" [routerLink]="['/danhmuc',dm.id]" >Bắt đầu thi</button>
       </div>
     </div>
   </div>
@@ -16,3 +20,4 @@
   <i (click)="next()" class="fa fa-hand-o-right"></i>
 
 </div>
+<button style="background-color: red"  >Bắt đầu thi</button>

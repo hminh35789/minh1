@@ -25,10 +25,14 @@ student:any;
   }
   kt(){
     for(var stu of this.hocsinh){
-          if(this.kiemtra.ten===stu.username&&this.kiemtra.pass==stu.password)
+          if(this.kiemtra.ten===stu.username)
           {
             window.alert("thanh cong")
           }
+          else {
+            window.alert("that bai")
+          
+          }  break;
         }
         }
       }

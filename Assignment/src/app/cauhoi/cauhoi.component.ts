@@ -10,15 +10,18 @@ import {ServerService} from '../server.service';
 export class CauhoiComponent implements OnInit {
 
   constructor(private http: HttpClient, private route: ActivatedRoute,private ss:ServerService) { }
-  
+  correctAns;
+  sumMark;dung;
   itemPerPage = 1;
   currentPage = 1;
- 
+ sumM:number;
+ ans;
   answer: any;
   totalPage: any;
   question;
   urlSubject = './assets/Quizs/';
   poduct;
+  toltalMark;
   product
   ngOnInit() {
     const pid=+this.route.snapshot.paramMap.get('id');
@@ -55,6 +58,7 @@ export class CauhoiComponent implements OnInit {
      this.getQuestion().subscribe(data => {
       this.question = data;
       this.answer = this.question[this.currentPage - 1].Answers;
+      this.totalPage = Math.ceil(this.question.length / this.itemPerPage);
     })
 
     
@@ -77,11 +81,44 @@ export class CauhoiComponent implements OnInit {
   //   }
 
   // }
-  // previous() {
-  //   if (this.currentPage > 1) {
-  //     this.currentPage--;
-  //     this.answer = this.question[this.currentPage - 1].Answers;
-  //   }
+  pre() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.answer = this.question[this.currentPage - 1].Answers;
+    }
+  }
+  
+  next() {
+    if (this.currentPage < this.totalPage) {
+      this.currentPage++;
+      this.answer = this.question[this.currentPage - 1].Answers;
+      console.log(this.correctAns);
+      
+      if (this.correctAns == this.question[this.currentPage - 2].AnswerId) {
+        this.sumMark++;
+        console.log(this.sumMark);
+      }
+    }
+
+  }
+  finish() {
+    
+    if (this.currentPage < this.totalPage) {
+      this.currentPage++;
+      this.answer = this.question[this.currentPage - 1].Answers;
+      console.log(this.correctAns)
+      if (this.correctAns == this.question[this.currentPage - 2].AnswerId) {
+        this.sumMark++;
+      }
+    }
+    this.toltalMark = this.sumMark;
+    console.log(this.toltalMark)
+  }
+sai(){
+  
+    this.dung('dung roi')
+  }
+}
 
   // }
   // last() {
@@ -107,5 +144,5 @@ export class CauhoiComponent implements OnInit {
   //   this.finished = false;
   // }
 
-}
+
 

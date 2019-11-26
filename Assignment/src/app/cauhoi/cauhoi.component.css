@@ -1,0 +1,22 @@
+.card {
+ border-bottom-right-radius: 180px;
+  
+    /* border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+  */
+    /* background: linear-gradient(45deg, #e61aa2, #4edadf); */
+  }
+  .right {
+    color: aqua;
+   
+    /* border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+  */
+    background: linear-gradient(90deg, pink, rgb(78, 133, 197));
+  }
+
+
+  h6 {
+   
+    background: linear-gradient(to right, rgb(110, 105, 105), rgb(14, 13, 13));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

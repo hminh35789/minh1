@@ -1,17 +1,48 @@
 
        
-       
-       {{product.Name}}
-    
-       <div class="card-body">
-        <span *ngFor='let q of question | paginate: { itemsPerPage: itemPerPage, currentPage: currentPage }'>
-            <span class="question">{{currentPage}}. {{q.Text}}</span>
-        </span><br>
-        <hr>
-        <div class="form-check" *ngFor = 'let a of answer'>
-            <input class="form-check-input" type="radio" [(ngModel)]="correctAns" [ngModelOptions]="{standalone: true}" value="{{a.Id}}" >
-            <label class="form-check-label" for="exampleRadios1" >
-                {{a.Text}}
-            </label>
+       <div class="card">
+           <div class="card-header right">
+               <div class="row">
+                   <div class="col-4">
+                        <h6>{{product.Name}}</h6>
+                   </div>
+                   <div class="col-8"style="padding-left:700px">
+                    <h6>thoi gian</h6>
+                        <countdown #cd [config]="{leftTime: 9000000, format: 'm:s',notify: [ 2, 5 ]}">thời gian :</countdown>
+                    </div>
+               </div>
+            
+          
+            
+            
+           </div>
+
+           <div class="card-body">
+            <span *ngFor='let q of question | paginate: { itemsPerPage: itemPerPage, currentPage: currentPage }'>
+                <span class="question">{{currentPage}}. {{q.Text}}</span>
+            </span><br>
+            <hr>
+            <div class="form-check" *ngFor = 'let a of answer'>
+                <input class="form-check-input" type="radio" [(ngModel)]="correctAns" [ngModelOptions]="{standalone: true}" value="{{a.Id}}" >
+                <label class="form-check-label" for="exampleRadios1" >
+                    {{a.Text}}
+                </label>
+            </div>
         </div>
-    </div>
+       </div>
+       
+<nav aria-label="Page navigation example" >
+    <ul class="pagination">
+        
+        <li class="page-link" (click)='pre()'><i
+            class="fa fa-arrow-left"></i></li>
+        <li class="page-link" (click)='next()'><i
+            class="fa fa-arrow-right"></i></li>
+       
+    </ul>
+</nav>
+<button (click)="finish()">finish</button>
+<div class="alert alert-primary" role="alert"[(ngModel)]="dung" [ngModelOptions]="{standalone: true}">
+  {{sai()}}
+  </div>
+     

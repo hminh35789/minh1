@@ -1,0 +1,12 @@
+.left {
+ 
+
+ 
+    background: linear-gradient(45deg, #e61aa2, #4edadf);
+  }
+  .right {
+ 
+   
+    border-image: conic-gradient(red, yellow, lime, aqua, rgb(71, 71, 85), magenta, red) 1;
+  
+  }

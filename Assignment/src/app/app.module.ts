@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { CountdownModule } from 'ngx-countdown';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { GopyComponent } from './gopy/gopy.component';
@@ -16,9 +17,18 @@ import { DanhmucComponent } from './danhmuc/danhmuc.component';
 import { CauhoiComponent } from './cauhoi/cauhoi.component';
 import {HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {  UserComponent} from './dangnhap/user/user.component';
+import {  UserListComponent} from './dangnhap/user-list/user-list.component';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { EmployeeService } from './shared/user.service';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [
+  declarations: [UserComponent,UserListComponent,
     AppComponent,
     GioithieuComponent,
     TrangchuComponent,
@@ -32,8 +42,15 @@ import {FormsModule} from '@angular/forms';
     DanhmucComponent,
     CauhoiComponent
   ],
-  imports: [NgxPaginationModule,FormsModule,
+  imports: [NgxPaginationModule,
+    FormsModule,
+    CountdownModule,
+    BrowserAnimationsModule,
+
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+     ToastrModule.forRoot(),
     BrowserModule,RouterModule.forRoot([
       {path:'',component:TrangchuComponent},
       {path:'trangchu',component:TrangchuComponent},
@@ -52,7 +69,7 @@ import {FormsModule} from '@angular/forms';
 
     
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

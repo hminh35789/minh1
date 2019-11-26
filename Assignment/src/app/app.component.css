@@ -5,3 +5,18 @@
 .menu>a{
     color: black
 }
+.left {
+ 
+    border-color: linear-gradient(45deg, #e61aa2, #4edadf);
+ 
+    background: linear-gradient(45deg, #e61aa2, #4edadf);
+   
+  }
+  .nav-link{
+      color: black;
+  }
+
+  .tieude> div > i::after {
+    content: "|";
+    padding:  10px
+}
